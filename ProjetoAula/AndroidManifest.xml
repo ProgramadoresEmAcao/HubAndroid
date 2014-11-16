@@ -32,6 +32,10 @@
             android:windowSoftInputMode="stateHidden"
             >
         </activity>
+        <activity
+            android:name="br.com.programadoresemacao.activity.TextViewActivity"
+            android:label="@string/title_activity_text_view" >
+        </activity>
     </application>
 
 </manifest>

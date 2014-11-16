@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends Activity implements OnClickListener{
 	Button btnCicloDeVida;
 	Button btnComponentes;
+	Button btnTextView;
 	Intent intent;
 
 	@Override
@@ -25,11 +26,13 @@ public class MainActivity extends Activity implements OnClickListener{
 	private void carregaElementos() {
 		btnCicloDeVida = (Button) findViewById(R.id.main_activity_btn_ciclo_de_vida);
 		btnComponentes = (Button) findViewById(R.id.main_btn_componentes);
+		btnTextView = (Button) findViewById(R.id.main_btn_text_view);
 	}
 
 	private void carregaListeners() {
 		btnCicloDeVida.setOnClickListener(this);
 		btnComponentes.setOnClickListener(this);
+		btnTextView.setOnClickListener(this);
 	}
 
 	@Override
@@ -41,6 +44,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.main_btn_componentes:
 			intent = new Intent(this, ComponentesActivity.class);
+			startActivity(intent);
+		case R.id.main_btn_text_view:
+			intent = new Intent(this, TextViewActivity.class);
 			startActivity(intent);
 		break;
 		}

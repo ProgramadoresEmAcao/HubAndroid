@@ -12,5 +12,7 @@
     <string name="title_activity_componentes">Componentes</string>
     <string name="button">Button</string>
     <string name="main_componentes">Componentes</string>
+    <string name="title_activity_text_view">Editando TextView</string>
+    <string name="main_text_view">Editar TextView</string>
 
 </resources>
