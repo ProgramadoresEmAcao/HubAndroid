@@ -45,10 +45,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.main_btn_componentes:
 			intent = new Intent(this, ComponentesActivity.class);
 			startActivity(intent);
+			break;
 		case R.id.main_btn_text_view:
 			intent = new Intent(this, TextViewActivity.class);
 			startActivity(intent);
-		break;
+			break;
 		}
 	}
 
