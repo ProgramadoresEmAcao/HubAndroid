@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HubAndroid</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="todo_name_button">Por Fazer</string>
+    <string name="main_activity_ciclo_de_vida">Ciclo De Vida</string>
+    <string name="main_activity_titulo">Programadores em Ação</string>
+    <string name="title_activity_estagios_da_activity">Estagios da Activity</string>
+    <string name="titulo_activity_ciclo_de_vida">Exemplo dos Ciclos de Vida da activity</string>
+    <string name="title_activity_componentes">Componentes</string>
+    <string name="button">Button</string>
+    <string name="main_componentes">Componentes</string>
+
+</resources>

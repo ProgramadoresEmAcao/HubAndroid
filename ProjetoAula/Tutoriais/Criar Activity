@@ -1,0 +1,34 @@
+COMO CRIAR NOVA ACTIVITY
+
+CRIE UM XML DO LAYOUT NA PASTA \res\layout
+
+<codigo>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+		<!-- coloque componentes aqui -->
+	</LinearLayout>
+
+</codigo>
+
+CRIE UMA CLASSE NO SRC QUE EXTENDA DE Activity
+<codigo>
+	public class ExemploActivity extends Activity {
+
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_exemplo);
+		}
+	}
+</codigo>
+
+DECLARE A ACTIVITY NO ARQUIVO MANIFEST
+<codigo>
+	<activity
+		android:name="com.path.ExemploActivity"
+		android:label="@string/titulo_da_activity" >
+	</activity>
+</codigo>

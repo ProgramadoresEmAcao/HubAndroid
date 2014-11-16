@@ -1,0 +1,42 @@
+EVENTO NO CLIQUE DE UM BOTAO
+
+NO XML DO LAYOUT CRIE UM BOTAO:
+<codigo>
+ 	<Button
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/btn_exemplo" 
+	    android:id="@+id/btn_exemplo"/>
+</codigo>
+
+NA CLASSE
+PRIMEIRO FACA O IMPORTE DA CLASSE OnClickListener
+
+<codigo>
+import android.view.View.OnClickListener;
+</codigo>
+
+DEPOIS IMPLEMENTE A INTERFACE OnClickListener:
+<codigo>
+public class ClasseActivity extends Activity implements OnClickListener{
+</codigo>
+
+
+SET UM LISTENER PARA O BOTAO(UMA CLASSE QUE IMPLEMENTA OnClickListener, QUE NO CASO PODE SER this
+<codigo>
+	//RECUPERAR O BOTAO
+	Button botaoExemplo = (Button) findViewById(R.id.btn_exemplo);
+	botaoExemplo.setOnClickListener(this);
+</codigo>
+
+POR FIM, IMPLEMENTAR O METODO onClick PARA TRATAR O EVENTO
+<codigo>
+	@Override
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.btn_exemplo:
+			<tratamento/>
+			break;
+		}
+	}
+</codigo>

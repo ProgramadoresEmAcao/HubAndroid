@@ -1,0 +1,16 @@
+CHAMAR NOVA TELA
+
+primeiro faça o import da classe no pacote <android.content>
+
+<codigo>
+import android.content.Intent;
+....
+
+<implementa quando quiser chamar>
+
+	Intent intent;
+	intent = new Intent(this, ClasseDaActivity.class);
+	startActivity(intent);
+	
+</implementa quando quiser chamar>
+</codigo>
