@@ -1,5 +1,8 @@
 package br.com.programadoresemacao.activity;
 
+import java.util.ArrayList;
+
+import br.com.programadoresemacao.global.Utils;
 import br.com.programadoresemacao.projetoaula.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +10,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends Activity implements OnClickListener{
+	/*
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_list_pessoa);
+		
+		ArrayList<Object> pessoas = new ArrayList<Object>();
+		pessoas.add(new Pessoa(R.drawable.e1, "Nome1", "12345678911"));
+		pessoas.add(new Pessoa(R.drawable.e2, "Nome2", "12345678912"));
+		pessoas.add(new Pessoa(R.drawable.e3, "Nome3", "12345678913"));
+		
+		ListView listViewPessoa = (ListView) findViewById(R.id.listViewPessoa);
+		listViewPessoa = (new Utils()).geraListView(pessoas, this);
+	}
+	
+	@Override
+	public void onClick(View view) {
+		
+	}
+	*/
 	Button btnCicloDeVida;
 	Button btnComponentes;
 	Button btnTextView;

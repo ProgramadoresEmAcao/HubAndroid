@@ -24,7 +24,7 @@
         </activity>
         <activity
             android:name="br.com.programadoresemacao.activity.CicloDeVidaActivity"
-            android:label="@string/title_activity_estagios_da_activity" >
+            android:label="@string/title_activity_ciclo_de_vida" >
         </activity>
         <activity
             android:name="br.com.programadoresemacao.activity.ComponentesActivity"
