@@ -19,8 +19,8 @@ public class AdapterListView extends BaseAdapter{
     
 	public AdapterListView(Context context, List<Pessoa> itens) { 
 		this.itens = itens; 
-		mInflater = LayoutInflater.from(context); 
 		this.context = context;
+		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
 	@Override
@@ -39,22 +39,22 @@ public class AdapterListView extends BaseAdapter{
 	}
 
 	@Override
+	@SuppressWarnings("unused")
 	public View getView(int position, View viewParametro, ViewGroup parent) {
-		Pessoa contato = itens.get(position);
+		Pessoa pessoa = itens.get(position);
 		
 		if(viewParametro == null){
-			LayoutInflater inflate = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			viewParametro = inflate.inflate(R.layout.item_pessoa,null);
+			viewParametro = mInflater.inflate(R.layout.item_pessoa,null);
 		}
 		
 		ImageView imageOperadora = ((ImageView) viewParametro.findViewById(R.id.image));
-		imageOperadora.setImageResource(contato.getImagem());
+		imageOperadora.setImageResource(pessoa.getImagem());
 		
 		TextView tvNome = ((TextView) viewParametro.findViewById(R.id.nome));
-		tvNome.setText(contato.getNome());
+		tvNome.setText(pessoa.getNome());
 		
 		TextView tvTelefone = ((TextView) viewParametro.findViewById(R.id.cpf));
-		tvTelefone.setText(contato.getCpf());
+		tvTelefone.setText(pessoa.getCpf());
 		
 		return viewParametro;
 	}

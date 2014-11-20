@@ -1,11 +1,13 @@
 package br.com.programadoresemacao.bean;
 
+import br.com.programadoresemacao.annotations.HelpListViewActivity;
 import br.com.programadoresemacao.annotations.HelpListViewImageView;
 import br.com.programadoresemacao.annotations.HelpListViewLayout;
 import br.com.programadoresemacao.annotations.HelpListViewTextView;
 import br.com.programadoresemacao.projetoaula.R;
 
 @HelpListViewLayout(layout = R.layout.item_pessoa)
+@HelpListViewActivity(activity = R.id.listViewPessoa)
 public class Pessoa {
 	
 	public Pessoa(int imagem, String nome, String cpf) {

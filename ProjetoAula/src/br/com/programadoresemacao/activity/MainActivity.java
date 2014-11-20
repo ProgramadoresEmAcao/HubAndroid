@@ -2,17 +2,14 @@ package br.com.programadoresemacao.activity;
 
 import java.util.ArrayList;
 
-import br.com.programadoresemacao.bean.AdapterListView;
-import br.com.programadoresemacao.bean.Pessoa;
-import br.com.programadoresemacao.global.Utils;
-import br.com.programadoresemacao.projetoaula.R;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ListView;
+import br.com.programadoresemacao.bean.Pessoa;
+import br.com.programadoresemacao.global.Utils;
+import br.com.programadoresemacao.projetoaula.R;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
@@ -20,7 +17,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_pessoa);
-		
+	
 		ListView lvPessoas = (ListView)findViewById(R.id.listViewPessoa);
 		
 		ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
@@ -28,11 +25,9 @@ public class MainActivity extends Activity implements OnClickListener{
 		pessoas.add(new Pessoa(R.drawable.e2, "Nome2", "12345678912"));
 		pessoas.add(new Pessoa(R.drawable.e3, "Nome3", "12345678913"));
 		
-		//ListView listViewPessoa = (ListView) findViewById(R.id.listViewPessoa);
-		//listViewPessoa = (new Utils()).geraListView(pessoas, this);
+		ListView listViewPessoa = (ListView) findViewById(R.id.listViewPessoa);
+		listViewPessoa = (new Utils()).geraListView(pessoas, this);
 		
-		AdapterListView adapterListView = new AdapterListView(this, pessoas);
-		lvPessoas.setAdapter(adapterListView);
 	}
 	
 	@Override
