@@ -1,4 +1,4 @@
-package br.com.programadoresemacao.activity;
+package br.com.programadoresemacao.bean;
 
 import br.com.programadoresemacao.annotations.HelpListViewImageView;
 import br.com.programadoresemacao.annotations.HelpListViewLayout;
@@ -13,6 +13,7 @@ public class Pessoa {
 		this.nome = nome;
 		this.cpf = cpf;
 	}
+	
 	@HelpListViewImageView(component = R.id.image)
 	private int imagem;
 	
@@ -24,6 +25,12 @@ public class Pessoa {
 	
 	public String getNome() {
 		return nome;
+	}
+	public int getImagem() {
+		return imagem;
+	}
+	public void setImagem(int imagem) {
+		this.imagem = imagem;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
