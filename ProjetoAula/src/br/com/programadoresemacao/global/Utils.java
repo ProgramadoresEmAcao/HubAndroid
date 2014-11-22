@@ -12,7 +12,7 @@ import br.com.programadoresemacao.projetoaula.R;
 
 public class Utils {
 	
-	public ListView geraListView(ArrayList<Pessoa> obj, Context context){
+	public ListView geraListView(ArrayList<Object> obj, Context context){
 		int idListView = (obj.get(0).getClass().getAnnotation(HelpListViewActivity.class)).activity();
 		ListView retorno = (ListView) ((Activity)context).findViewById(idListView);
 		AdapterListView adapterListView = new AdapterListView(context.getApplicationContext(), obj);

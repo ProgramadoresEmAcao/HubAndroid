@@ -20,7 +20,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 		ListView lvPessoas = (ListView)findViewById(R.id.listViewPessoa);
 		
-		ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+		ArrayList<Object> pessoas = new ArrayList<Object>();
 		pessoas.add(new Pessoa(R.drawable.e1, "Nome1", "12345678911"));
 		pessoas.add(new Pessoa(R.drawable.e2, "Nome2", "12345678912"));
 		pessoas.add(new Pessoa(R.drawable.e3, "Nome3", "12345678913"));

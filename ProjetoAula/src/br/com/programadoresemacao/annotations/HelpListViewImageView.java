@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface HelpListViewImageView {
 	int component();
-	boolean resource() default false;
+	boolean resource() default true;
 }
