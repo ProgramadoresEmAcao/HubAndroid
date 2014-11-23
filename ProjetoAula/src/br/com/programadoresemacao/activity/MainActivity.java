@@ -1,31 +1,26 @@
 package br.com.programadoresemacao.activity;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ListView;
-import br.com.programadoresemacao.bean.Pessoa;
-import br.com.programadoresemacao.global.Utils;
+import android.widget.Button;
 import br.com.programadoresemacao.projetoaula.R;
 
 public class MainActivity extends Activity implements OnClickListener{
-	
+	/*
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_pessoa);
 	
-		ListView lvPessoas = (ListView)findViewById(R.id.listViewPessoa);
-		
+		ListView listViewPessoa = (ListView) findViewById(R.id.listViewPessoa);
 		ArrayList<Object> pessoas = new ArrayList<Object>();
 		pessoas.add(new Pessoa(R.drawable.e1, "Nome1", "12345678911"));
 		pessoas.add(new Pessoa(R.drawable.e2, "Nome2", "12345678912"));
 		pessoas.add(new Pessoa(R.drawable.e3, "Nome3", "12345678913"));
 		
-		ListView listViewPessoa = (ListView) findViewById(R.id.listViewPessoa);
 		listViewPessoa = (new Utils()).geraListView(pessoas, this);
 		
 	}
@@ -34,7 +29,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void onClick(View view) {
 		
 	}
-	/*
+	*/
+	
 	Button btnCicloDeVida;
 	Button btnComponentes;
 	Button btnTextView;
@@ -77,7 +73,7 @@ public class MainActivity extends Activity implements OnClickListener{
 			startActivity(intent);
 			break;
 		}
-	}*/
+	}
 
 
 }

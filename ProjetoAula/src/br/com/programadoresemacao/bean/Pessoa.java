@@ -1,13 +1,10 @@
 package br.com.programadoresemacao.bean;
 
-import br.com.programadoresemacao.annotations.HelpListViewActivity;
-import br.com.programadoresemacao.annotations.HelpListViewImageView;
-import br.com.programadoresemacao.annotations.HelpListViewLayout;
-import br.com.programadoresemacao.annotations.HelpListViewTextView;
+import br.com.programadoresemacao.annotations.HelpListView;
+import br.com.programadoresemacao.annotations.HelpListViewComponent;
 import br.com.programadoresemacao.projetoaula.R;
 
-@HelpListViewLayout(layout = R.layout.item_pessoa)
-@HelpListViewActivity(activity = R.id.listViewPessoa)
+@HelpListView(listView = R.id.listViewPessoa, itemListView = R.layout.item_pessoa)
 public class Pessoa {
 	
 	public Pessoa(int imagem, String nome, String cpf) {
@@ -16,13 +13,13 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 	
-	@HelpListViewImageView(component = R.id.image)
+	@HelpListViewComponent(R.id.image)
 	private int imagem;
 	
-	@HelpListViewTextView(component= R.id.nome)
+	@HelpListViewComponent(R.id.nome)
 	private String nome;
 	
-	@HelpListViewTextView(component= R.id.cpf)
+	@HelpListViewComponent(R.id.cpf)
 	private String cpf;
 	
 	public String getNome() {
