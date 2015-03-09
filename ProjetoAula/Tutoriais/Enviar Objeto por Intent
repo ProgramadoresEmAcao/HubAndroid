@@ -1,0 +1,20 @@
+Enviar Objetos com Intent
+
+NA CLASSE DA ACTIVITY QUE ENVIA E QUE RECEBE COLOCAR O IMPORT
+import android.content.Intent;
+
+CLIAR UMA CLASSE QUE IMPLEMENTA SERIALIZABLE
+public class ClasseExemplo implements Serializable{
+	...
+}
+
+ENVIANDO OBJETO
+	ClasseExemplo classeExemplo = new ClasseExemplo();
+	...
+	Intent intent = new Intent(this, ActivityQueRecebe.class);
+    intent.putExtra("objeto", classeExemplo);
+    startActivity(intent);
+	
+RECEBENDO OBJETO
+	Intent intent = getIntent();
+    ClasseExemplo classeExemplo = (ClasseExemplo)intent.getSerializableExtra("objeto");
